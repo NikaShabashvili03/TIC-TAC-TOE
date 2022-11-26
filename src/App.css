@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: darkcyan;
   flex-direction: column;
+  height: 100vh;
+}
+.title{
+  margin-top: 15px;
+  padding-bottom: 10px;
+  display: flex;
+  color: white;
+  width: 90%;
+  height: 5%;
+  border-bottom: 4px dotted darkgoldenrod;
+  align-items: center;
+  font-size: 40px;
+  justify-content: center;
+}
+.moves__score{
+  height: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.moves__score h1{
+  padding: 0;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100px;
+}
+.moves__score .one{
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25px;
+  height: 100px;
+}
+.moves__score .one span{
+  font-size: 100px;
+  position: absolute;
+  top: -10%;
+  color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  left: -10%;
+  width: 15px;
+  height: 15px;
+}
+.moves__score .two{
+  font-size: 3rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25px;
+  height: 100px;
+}
+.moves__score .two span{
+  font-size: 100px;
+  position: absolute;
+  top: -10%;
+  color: darkgoldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  right: -10%;
+  width: 15px;
+  height: 15px;
+}
+.Game{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: center
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Gamebtn {
+  background: transparent;
+  color: white;
+  width: 110px;
+  border: 0;
+  height: 110px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Gamebtn:nth-child(1){
+  border-right: 2px solid darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(2){
+  border-right: 2px solid darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(3){
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(4){
+  border-right: 2px solid darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(5){
+  border-right: 2px solid darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(6){
+  border-bottom: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(7){
+  border-right: 2px solid darkgoldenrod;
+}
+.Gamebtn:nth-child(8){
+  border-right: 2px solid darkgoldenrod;
+}
+.Gamebtn:hover{
+  cursor: pointer;
+}
+.Gamebtn:disabled {
+  pointer-events:none;
+  cursor: not-allowed;
+}
+.Gamebtn h2{
+  font-size: 80px;
+}
+.reset{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.reset button{
+  background-color: transparent;
+  color: white;
+  border: 0;
+  width: 250px;
+  font-size: 20px;
+}.reset button:hover{
+  transform: translateY(-2px);
+  cursor: pointer;
 }
